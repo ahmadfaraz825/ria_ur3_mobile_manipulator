@@ -1,0 +1,6 @@
+footprint: [[-0.55, -0.45], [-0.55, 0.45], [0.55, 0.45], [0.55, -0.45]] # RIA-R100
+
+obstacle_layer:
+  observation_sources: scan 
+  scan: {sensor_frame: lms_laser_base_link_transformed, data_type: LaserScan, topic: scan, marking: true, clearing: true, inf_is_valid: true, obstacle_range: 6.0, raytrace_range: 10.0}
+  track_unknown_space: true

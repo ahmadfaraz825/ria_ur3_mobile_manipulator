@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<launch>
+
+  <!-- Run Map Server -->
+  <node name="map_server" pkg="map_server" type="map_server" args="$(find r100_navigation)/maps/office.yaml">
+    <param name="frame_id" value="map"/>
+  </node>
+  
+  <!-- Run AMCL -->
+  <!--if EKF is used Gmapping will use odom as its odom-frame , else use odom_laser-->
+
+    <include file="$(find r100_navigation)/launch/include/amcl.launch.xml"/>
+
+  <!-- Run Move Base -->
+  <include file="$(find r100_navigation)/launch/move_base.launch"/>
+
+</launch>

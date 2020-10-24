@@ -1,0 +1,26 @@
+topics:
+- name    : rc_velocity
+  topic   : rc/cmd_vel
+  timeout : 0.5
+  priority: 100
+
+- name    : joystick
+  topic   : joy/cmd_vel
+  timeout : 0.5
+  priority: 90
+
+- name    : navigation
+  topic   : move_base/cmd_vel
+  timeout : 0.5
+  priority: 50
+
+- name    : external
+  topic   : cmd_vel
+  timeout : 0.5
+  priority: 10
+
+locks:
+- name    : runstop
+  topic   : e100_runstop
+  timeout : 0.0    
+  priority: 255

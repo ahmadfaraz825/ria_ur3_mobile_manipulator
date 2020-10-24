@@ -1,0 +1,15 @@
+model: farryn
+M1_P: 100
+M2_P: 100
+M1_I: 10 
+M2_I: 10
+M1_QPPS: 60570
+M2_QPPS: 60406
+AXLE_WIDTH: 0.62
+motor_usb_port: /dev/R100_CONTROLLER
+
+KP_velocity: 15
+frw_vel_topic: /summit_xl/joint_frw_velocity_controller/command
+
+cmd_vel_topic: /cmd_vel
+

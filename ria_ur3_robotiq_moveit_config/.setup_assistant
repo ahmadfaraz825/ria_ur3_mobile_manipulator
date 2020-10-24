@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: ria_ur3_robotiq85_description
+    relative_path: urdf/ria_ur3_robotiq85.urdf.xacro
+    xacro_args: "--inorder "
+  SRDF:
+    relative_path: config/ria_ur3_robotiq85.srdf
+  CONFIG:
+    author_name: Ahmad
+    author_email: faraz@gaitech.net
+    generated_timestamp: 1602926620

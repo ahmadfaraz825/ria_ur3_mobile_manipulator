@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro" name="ria_ur3_robotiq85" >
+
+  <!-- common stuff -->
+  <xacro:include filename="$(find ur_description)/urdf/common.gazebo.xacro" />
+
+  <!-- ur5e with robotiq85 -->
+  <xacro:include filename="$(find ur3_robotiq85_description)/urdf/ur3_robotiq85.urdf.xacro" />
+
+  <!-- arm and gripper-->
+ <xacro:ur3_robot prefix="ur3_" joint_limited="false"
+    transmission_hw_interface="hardware_interface/PositionJointInterface"/>
+  <!-- ria -->
+  <include filename="$(find robot)/xacro/robot.xacro"/>
+
+
+  <link name="box_link">
+    <!-- <inertial>
+      <origin xyz="0 0 0.5" rpy="0 0 0"/>
+      <mass value="1"/>
+      <inertia ixx="100"  ixy="0"  ixz="0" iyy="100" iyz="0" izz="100" />
+    </inertial> -->
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.30 0.45 0.50" />
+      </geometry>
+      <material name="Cyan">
+        <color rgba="0 1.0 1.0 1.0"/>
+      </material>
+    </visual>
+
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.30 0.45 0.50" />
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="base_link_to_cylinder">
+    <!-- <inertial>
+      <origin xyz="0 0 0.5" rpy="0 0 0"/>
+      <mass value="1"/>
+      <inertia ixx="100"  ixy="0"  ixz="0" iyy="100" iyz="0" izz="100" />
+    </inertial> -->
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.08" length="0.01" />
+      </geometry>
+      <material name="Cyan">
+        <color rgba="0 1.0 1.0 1.0"/>
+      </material>
+    </visual>
+
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.08" length="0.01"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="base_link_to_cylinder_joint" type="fixed">
+    <parent link="base_link" />
+    <child link = "base_link_to_cylinder" />
+    <origin xyz="0.17 0.0 0.25" rpy="0.0 0.0 0.0" />
+  </joint>
+
+  <joint name="base_link_to_box_joint" type="fixed">
+    <parent link="base_link" />
+    <child link = "box_link" />
+    <origin xyz="-0.14 0.0 0.50" rpy="0.0 0.0 0.0" />
+  </joint>
+
+  <joint name="ria_ur3_joint" type="fixed">
+    <parent link="base_link" />
+    <child link = "ur3_base_link" />
+    <origin xyz="0.17 0.0 0.255" rpy="0.0 0.0 -1.5707" />
+  </joint>
+
+
+</robot>
+
+

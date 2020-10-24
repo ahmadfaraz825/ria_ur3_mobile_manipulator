@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+
+<robot name="RIA-R100-wheels" xmlns:xacro="http://www.ros.org/wiki/xacro"> 
+
+   <link name="WHEEL_FL">
+      <inertial>
+         <mass value="2.5"/>
+         <origin rpy="0 0 0" xyz="0 0 0"/>
+         <inertia  ixx="19019.70926" ixy="0.02083"  ixz="0.06329"  iyy="35424.16028"  iyz="0.06895"  izz="19019.47374" />   
+      </inertial>
+
+      <visual>
+         <geometry>
+	    <mesh filename="package://r100_description/meshes/${WHEEL_MESH}" scale="0.001 0.001 0.001" />
+         </geometry>
+         <material name="Dark_Grey"/>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+      </visual>
+      <collision>
+         <geometry>
+	    <mesh filename="package://r100_description/meshes/${WHEEL_MESH}" scale="0.001 0.001 0.001" />
+         </geometry>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+      </collision>
+   </link>
+
+   <link name="WHEEL_FR">
+      <inertial>
+         <mass value="2.5"/>
+         <origin rpy="0 0 0" xyz="0 0 0"/>
+         <inertia  ixx="19019.70926" ixy="0.02083"  ixz="0.06329"  iyy="35424.16028"  iyz="0.06895"  izz="19019.47374" />     
+      </inertial>
+      <visual>
+         <geometry>
+	    <mesh filename="package://r100_description/meshes/${WHEEL_MESH}" scale="0.001 0.001 0.001" />
+         </geometry>
+         <material name="Dark_Grey"/>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+      </visual>
+      <collision>
+         <geometry>
+	    <mesh filename="package://r100_description/meshes/${WHEEL_MESH}" scale="0.001 0.001 0.001" />
+         </geometry>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+      </collision>
+   </link>
+
+   <link name="WHEEL_BL">
+      <inertial>
+         <mass value="2.5"/>
+         <origin rpy="0 0 0" xyz="0 0 0"/>
+         <inertia  ixx="19019.70926" ixy="0.02083"  ixz="0.06329"  iyy="35424.16028"  iyz="0.06895"  izz="19019.47374" />   
+      </inertial>
+      <visual>
+         <geometry>
+	    <mesh filename="package://r100_description/meshes/${WHEEL_MESH}" scale="0.001 0.001 0.001" />
+         </geometry>
+         <material name="Dark_Grey"/>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+      </visual>
+      <collision>
+         <geometry>
+	    <mesh filename="package://r100_description/meshes/${WHEEL_MESH}" scale="0.001 0.001 0.001" />
+         </geometry>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+      </collision>
+   </link>
+
+   <link name="WHEEL_BR">
+      <inertial>
+         <mass value="2.5"/>
+         <origin rpy="0 0 0" xyz="0 0 0"/>
+         <inertia  ixx="19019.70926" ixy="0.02083"  ixz="0.06329"  iyy="35424.16028"  iyz="0.06895"  izz="19019.47374" />   
+      </inertial>
+      <visual>
+         <geometry>
+	    <mesh filename="package://r100_description/meshes/${WHEEL_MESH}" scale="0.001 0.001 0.001" />
+         </geometry>
+         <material name="Dark_Grey"/>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+      </visual>
+      <collision>
+         <geometry>
+	    <mesh filename="package://r100_description/meshes/${WHEEL_MESH}" scale="0.001 0.001 0.001" />
+         </geometry>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+      </collision>
+   </link>
+
+
+
+</robot>

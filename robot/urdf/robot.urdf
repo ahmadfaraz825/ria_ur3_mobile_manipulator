@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<robot
+  name="robot">
+
+  <!-- Links -->
+  <link name="support_base_link">
+    <inertial>
+      <origin
+        xyz="0.10327832052149 0.0372466954324708 -0.496378650684954"
+        rpy="0 0 0" />
+      <mass
+        value="2.48080254473007" />
+      <inertia
+        ixx="0.0773744637334238"
+        ixy="6.4002592223489E-07"
+        ixz="0.00368711874111876"
+        iyy="0.0690926422502958"
+        iyz="-1.37878734358701E-06"
+        izz="0.0161283270553764" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot/meshes/support_base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot/meshes/support_base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="monitor_link">
+    <inertial>
+      <origin
+        xyz="-0.0047452378025854 0.0374927729597716 -0.0810460101735"
+        rpy="0 0 0" />
+      <mass
+        value="0.761253986809395" />
+      <inertia
+        ixx="0.0111724861155116"
+        ixy="-2.34080031154773E-08"
+        ixz="-8.89378662767494E-08"
+        iyy="0.00330658399426738"
+        iyz="9.02422878814709E-08"
+        izz="0.0078773344892865" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot/meshes/monitor_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot/meshes/monitor_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="pendant_link">
+    <inertial>
+      <origin
+        xyz="0.0350056429345722 -0.0968680905917769 -0.0288958119315054"
+        rpy="0 0 0" />
+      <mass
+        value="0.968577764159598" />
+      <inertia
+        ixx="0.0108572978517465"
+        ixy="-2.44332736320261E-06"
+        ixz="-8.87980157348568E-06"
+        iyy="0.00402761225251736"
+        iyz="-0.000107899701770472"
+        izz="0.00690594243315491" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot/meshes/pendant_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot/meshes/pendant_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="velodyne_base_link">
+    <inertial>
+      <origin
+        xyz="-2.58019504939533E-06 0.000294784456415398 0.0357745257662945"
+        rpy="0 0 0" />
+      <mass
+        value="0.585082152463546" />
+      <inertia
+        ixx="0.000630263912670069"
+        ixy="-1.12579157483122E-10"
+        ixz="-5.00503005886412E-08"
+        iyy="0.000629066957604987"
+        iyz="-6.84879830425266E-08"
+        izz="0.000749251773697657" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot/meshes/velodyne_base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot/meshes/velodyne_base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="viper_support_base_link">
+    <inertial>
+      <origin
+        xyz="-0.000961026680645904 -0.0002828303716369 0.0113571933014833"
+        rpy="0 0 0" />
+      <mass
+        value="0.279111471310996" />
+      <inertia
+        ixx="0.00131536508624289"
+        ixy="-3.22784169903359E-06"
+        ixz="1.35831142959975E-06"
+        iyy="0.00016956077268555"
+        iyz="1.62926573963573E-07"
+        izz="0.00142067025381908" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot/meshes/viper_support_base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot/meshes/viper_support_base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="laser_frame_base_link">
+    <inertial>
+      <origin
+        xyz="-0.0925662167299411 0.0204935426320307 0.0287588041043606"
+        rpy="0 0 0" />
+      <mass
+        value="0.453009728797675" />
+      <inertia
+        ixx="0.000839483776537808"
+        ixy="3.58334319531758E-08"
+        ixz="1.10201699132376E-07"
+        iyy="0.000466064154296071"
+        iyz="-1.38182722960199E-06"
+        izz="0.000806388506070963" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot/meshes/laser_frame_base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot/meshes/laser_frame_base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <link  name="lms_laser_base_link">
+    <inertial>
+      <origin
+        xyz="-0.00412078407198768 -7.34978732919167E-06 -0.083658932216063"
+        rpy="0 0 0" />
+      <mass
+        value="1.18047297289236" />
+      <inertia
+        ixx="0.00287819441466123"
+        ixy="-1.63359094880313E-07"
+        ixz="-9.33735176576001E-05"
+        iyy="0.00289391901098803"
+        iyz="-3.30462509615558E-07"
+        izz="0.00159334262017427" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot/meshes/lms_laser_base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot/meshes/lms_laser_base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <!-- Joints -->
+  <joint name="support_to_monitor_joint" type="fixed">
+    <origin
+      xyz="-0.0093899 -0.037642 -0.20647"
+      rpy="0 0.074318 0" />
+    <parent
+      link="support_base_link" />
+    <child
+      link="monitor_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+
+  <joint name="support_to_pendant_joint" type="fixed">
+    <origin
+      xyz="-0.014461 -0.095005 -0.55431"
+      rpy="0 0 -3.1416" />
+    <parent
+      link="support_base_link" />
+    <child
+      link="pendant_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+
+  <joint name="support_to_velodyne_base_joint" type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 1.5544" />
+    <parent
+      link="support_base_link" />
+    <child
+      link="velodyne_base_link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+
+  <joint name="support_to_viper_base_joint" type="fixed">
+    <origin
+      xyz="0.0065 -0.0021801 -0.059"
+      rpy="0 0 0" />
+    <parent
+      link="support_base_link" />
+    <child
+      link="viper_support_base_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+
+  <joint name="support_to_laser_frame_joint" type="fixed">
+    <origin
+      xyz="0.83126 -0.00014165 -1.0154"
+      rpy="0 0 0" />
+    <parent
+      link="support_base_link" />
+    <child
+      link="laser_frame_base_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+
+  <joint name="lms_laser_base_joint" type="fixed">
+    <origin
+      xyz="-0.00124 0 -0.0083707"
+      rpy="0 0 0.00016969" />
+    <parent
+      link="laser_frame_base_link" />
+    <child
+      link="lms_laser_base_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+
+
+
+</robot>

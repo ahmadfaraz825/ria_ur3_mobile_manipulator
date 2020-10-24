@@ -1,0 +1,32 @@
+Mass properties of ×ÜÍ¼
+     Configuration: Ä¬ÈÏ
+     Coordinate system: Coordinate System1
+
+Mass = 49.821 kilograms
+
+Volume = 32158908.435 cubic millimeters
+
+Surface area = 7162367.217  square millimeters
+
+Center of mass: ( millimeters )
+	X = -6.011
+	Y = 0.042
+	Z = 108.789
+
+Principal axes of inertia and principal moments of inertia: ( kilograms *  square millimeters )
+Taken at the center of mass.
+	 Ix = (-1.000,  0.004,  0.012)   	Px = 2591490.563
+	 Iy = (-0.004, -1.000,  0.000)   	Py = 3804688.286
+	 Iz = ( 0.012,  0.000,  1.000)   	Pz = 5604647.927
+
+Moments of inertia: ( kilograms *  square millimeters )
+Taken at the center of mass and aligned with the output coordinate system.
+	Lxx = 2591968.634	Lxy = -4998.774	Lxz = -37124.848
+	Lyx = -4998.774	Lyy = 3804667.710	Lyz = -75.015
+	Lzx = -37124.848	Lzy = -75.015	Lzz = 5604190.432
+
+Moments of inertia: ( kilograms *  square millimeters )
+Taken at the output coordinate system.
+	Ixx = 3181594.504	Ixy = -5011.278	Ixz = -69704.543
+	Iyx = -5011.278	Iyy = 4396093.680	Iyz = 151.290
+	Izx = -69704.543	Izy = 151.290	Izz = 5605990.706

@@ -1,0 +1,9 @@
+<launch>
+
+  <!-- <param name="/use_sim_time" value="true" /> -->
+
+  <include file="$(find r100_bringup)/launch/cartographer.launch" />
+
+  <node name="rviz" pkg="rviz" type="rviz" required="true"
+      args="-d $(find r100_bringup)/launch/demo_3d.rviz" />
+</launch>

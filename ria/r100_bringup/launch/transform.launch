@@ -1,0 +1,20 @@
+
+<launch>
+
+   <arg name="pi/2" value="1.5707963267948966" />
+   <arg name="optical_rotate" value="0 0 0.005 0 0 0" />
+   <arg name="optical_rotate_vlp" value="0 0 0.043 0 0 0" />
+   <!-- -0.071 -->
+   <arg name="optical_rotate_lms" value="0 0 0.1 0 0 0" />
+   <arg name="optical_rotate_sr300" value="0.25 0 1 0 0 0" />
+   <node pkg="tf" type="static_transform_publisher" name="cvm_base_link_trans"
+        args="$(arg optical_rotate)  viper_support_base_link VIPER/cvm_base_link 100" />
+
+   <node pkg="tf" type="static_transform_publisher" name="velodyne_trans"
+        args="$(arg optical_rotate_vlp)  velodyne_base_link velodyne_base_link_transformed 100" />
+
+   <node pkg="tf" type="static_transform_publisher" name="lms_trans"
+        args="$(arg optical_rotate_lms) lms_laser_base_link lms_laser_base_link_transformed 100" />
+           <node pkg="tf" type="static_transform_publisher" name="sr300_trans"
+        args="$(arg optical_rotate_sr300) base_link camera_link 100" />
+</launch>

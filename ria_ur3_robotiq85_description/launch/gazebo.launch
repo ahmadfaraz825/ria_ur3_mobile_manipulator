@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<launch>
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <!-- <arg name="world_name" value="$(find r100_sim)/worlds/office.world"/>  -->
+    <arg name="use_sim_time" value="true"/>
+    <arg name="debug" value="false"/>
+    <arg name="paused" value="false"/>
+    <arg name="gui" value="true"/>
+  </include>
+
+
+  <param name="robot_description" textfile="$(find ria_ur3_robotiq85_description)/urdf/ria_ur3_robotiq85.urdf"/>
+  <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" args="-urdf -param robot_description -model ria_ur3_robotiq85" respawn="false" output="screen" />
+    
+
+  <rosparam file="$(find ur_gazebo)/controller/arm_controller_ur5.yaml" command="load"/>
+  <rosparam file="$(find ur_gazebo)/controller/joint_state_controller.yaml" command="load"/> 
+  <rosparam file="$(find ur_gazebo)/controller/gripper_controller_robotiq.yaml" command="load"/> 
+  <rosparam file="$(find r100_sim)/config/gazebo_diff_control.yaml" command="load"/>
+  <node 
+    name="controller_spawner_ur" 
+    pkg="controller_manager" 
+    type="spawner"  
+    args=" arm_controller joint_state_controller gripper_controller ria_base_controller" 
+    respawn="false" 
+    output="screen"
+  />
+
+
+  <!-- <node pkg="robot_localization" type="ekf_localization_node" name="ekf_localization">
+    <rosparam command="load" file="$(find r100_sim)/config/localization.yaml" />
+  </node> -->
+     
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="false"/>
+
+ 
+</launch>
+
+
+                                                                                                                  

@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<robot name="RIA-R100-sick_tim571_lidar">
+
+    <link name="laser_mount_link">
+    </link>
+
+    <link name="laser">
+    </link>
+
+
+    <joint name="${prefix}_base_joint" type="fixed">
+      <xacro:insert_block name="origin" />
+      <parent link="${parent}"/>
+      <child link="${prefix}_base_link"/>
+    </joint>
+  
+    
+    <link name="laser_mount_link">
+      <collision>
+        <origin xyz="${laser_x} ${laser_y} ${laser_z}" rpy="0 0 0"/>
+        <geometry>
+         <mesh filename="package://ria_description/meshes/sick_tim571.dae"/>
+        </geometry>
+      </collision>
+  
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+            <mesh filename="package://ria_description/meshes/sick_tim571.dae"/>
+        </geometry>
+      </visual>
+  
+      <inertial>
+        <mass value="1e-5" />
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6" />
+      </inertial>
+    </link>
+    
+    <joint name="${prefix}_joint" type="fixed">
+      <origin xyz="0 0 0.06246" rpy="0 0 0"/>
+      <parent link="${prefix}_base_link"/>
+      <child link="${prefix}_link"/>
+    </joint>
+  
+    
+    <link name="${prefix}_link">
+    </link>
+     
+</robot>

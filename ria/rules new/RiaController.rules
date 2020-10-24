@@ -1,0 +1,4 @@
+# set the udev rule , make the device_port be fixed by rplidar
+#
+KERNEL=="ttyACM*", ATTRS{idVendor}=="03eb", ATTRS{idProduct}=="2404", MODE:="0777", SYMLINK+="R100_CONTROLLER"
+
